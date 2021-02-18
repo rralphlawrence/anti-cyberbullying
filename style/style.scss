@@ -1,0 +1,1077 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$primary-color: #071e3d;
+$secondary-color:#fff;
+
+body{
+  overflow-x: hidden;
+}
+
+.cover{
+    background: linear-gradient(rgba(0,0,0,0.5) , rgba(58, 58, 58, 0.4)) , url(/img/pexels-mikotoraw-3367850.jpg) ; 
+    height: 90vh;
+    width: 100%;
+    max-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+.content {
+  display: flex;
+  height: 40%;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  margin: 2rem 4rem;
+  
+  .content-text{
+      text-transform: uppercase;
+      animation: navs 2s ease-in-out;
+      letter-spacing: 12px;
+      color: #fff;
+      font-size: 2rem;
+      border-left: 3px solid #fff;
+      padding: 0rem 1rem; 
+  }
+  span{
+      font-size: 3rem;
+      text-decoration: none;
+      font-weight: 700;
+      color:#ff5d5d;
+    
+  }
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    color: #ffffff;
+    z-index: 9999;
+    animation: navs 1s ease-in;
+    
+}
+.logo a{
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+    color:#f5f5f5;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    font-weight: 600;
+    
+
+}
+.logo{
+    padding: .5rem 2.5rem;
+    margin: .5rem;
+}
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar-links ul li{
+    list-style: none;
+    animation: navs 1s ease-in;
+
+
+}
+.navbar-links ul a{
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: 'Poppins';
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0rem 2rem;
+    display: block;
+}
+.navbar-links :hover{
+    color: rgb(185, 185, 185); ;
+}
+.toggle-button{
+     position: absolute;
+     top: 1.5rem;
+     right: 1rem;
+     display: none;
+     flex-direction: column;
+     justify-content: space-between;
+     width: 30px;
+     height: 21px;
+
+     .bar{
+         height: 3px;
+         width: 100%;
+         background-color: #ffffff;
+         border-radius: 10px;
+     
+     }
+}
+
+ @media screen and (max-width:900px){
+     .navbar{
+         flex-direction: column;
+         align-items: flex-start;
+     }
+
+     .toggle-button{
+         display: flex;
+     }
+     .navbar-links{
+         display: none;
+         width: 100%;
+        
+        
+     }
+
+     .navbar-links ul{
+         width: 100%;
+         flex-direction: column;
+         
+     }
+     .navbar-links ul li{
+         text-align: center;
+         transition: .5s ease-in;
+         &:hover{
+             color: #cccccc;
+            
+         }
+     }
+     .navbar-links ul li a{
+         padding: .5rem 1rem;
+     }
+     .navbar-links.active{
+         display: flex;
+         left: 100%;
+     }
+ }
+ 
+ @media screen and (max-width:460px){
+
+    #text{
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 1.2rem;
+
+        span{
+            font-size: 1.3rem;
+        }
+    }
+   #text-2{
+       font-size: 1rem;
+   }
+ }
+
+ .section{
+     height: 140px;
+     display: flex;
+     justify-content: center;
+     text-align: center;
+     font-size:2rem;
+     letter-spacing: 10px;
+     font-family: 'poppins';
+    color: rgb(61, 61, 61);
+   
+     span{
+       font-family: sans-serif;
+       color: #990d0d;
+       font-size: 3rem;
+       font-weight: 800;
+       margin: 10px;
+     }
+ }
+ .card1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin: 0;
+    
+    img{
+        object-fit: cover;
+        flex: 1;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .context{
+        font-size: 1.5rem;
+        text-align: left;
+        padding: 1rem;
+        flex: 1;
+
+        h4{
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            text-align: center;
+            font-family: 'poppins';
+            
+            span{
+                font-size: 2rem;
+                color: rgb(83, 83, 83);
+            }
+        }
+        p{
+            font-size: 1.4rem;
+            padding: 1rem;
+            font-family: 'roboto';
+            text-align: center;
+            line-height: 40px;
+        }
+    }
+ }
+ .card2{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+
+    .img{
+        flex: 1;
+        object-fit: cover;
+    }
+    .context2{
+        font-size:1.5rem;
+        padding: 1rem;
+        flex: 2;
+     
+    }
+    h4{
+        font-family: 'poppins';
+        letter-spacing: 8px;
+        text-transform: uppercase;
+        padding: 1rem;
+        span{
+            font-size: 2rem;
+            font-weight: 800;
+            color: #990d0d;
+           
+        }
+    }
+    p{
+        text-align: left;
+        padding: 1rem;
+        font-family: 'roboto';
+    }
+   
+ }
+ .blank{
+     height: 100px;
+     
+ }
+
+ footer{
+     position: relative;
+     bottom:0px;
+     left: 0px;
+     right: 0px;
+     background: rgb(56, 56, 56);
+     height: auto;
+     width: 100%;
+     font-family: 'poppins';
+     padding-top: 20px;
+     color: #fff;
+
+ }
+ .footer-content{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     text-align: center;
+
+ }
+ .footer-content h3{
+
+     letter-spacing: 12px;
+     font-size: 1.8rem;
+     font-weight: 400;
+     text-transform: uppercase;
+     line-height: 2rem;
+ }
+ .footer-content p{
+     padding: 1rem;
+     max-width: 500px;
+     margin: 10px auto;
+     line-height: 1rem;
+     font-size: 1rem;
+ }
+
+ .social{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 1rem 0rem 3rem 0rem;
+    
+ }
+ .social li{
+    text-decoration: none;
+    color: #fff;
+ }
+    .social a{
+        font-size: 1.4rem;
+        transition: color .4s ease-in;
+        color: #fff;
+        margin: 0 1rem;
+    }
+
+    .social a:hover{
+        color: rgb(170, 170, 170);
+    }
+
+    .footer-bottom{
+        background:  rgb(56, 56, 56);
+        padding: 20px 0;
+        text-align: center;
+
+    }
+    .footer-bottom p{
+        font-size: 14px;
+        word-spacing: 2px;
+        text-transform: uppercase;
+        padding: 1rem;
+    
+    }
+ button{
+     width: 150px;
+     height: 40px;
+     margin: 1rem;
+     background: transparent;
+     border: 1px solid #646464;
+     color: rgb(68, 68, 68);
+     font-size: 1rem;
+     transition: color .4s;
+     cursor: pointer;
+    border-radius: 5px;
+     &:hover{
+         color: rgb(177, 177, 177);
+         border: 1px solid rgb(175, 175, 175);
+     }
+ }
+ .share-btn{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+ }
+.context .share-btn .share{ 
+    letter-spacing: 3px;
+    font-family: 'roboto';
+    text-align: center;
+    width: 130px;
+    height: 40px;
+    margin: 1rem;
+    background: transparent;
+    color: rgb(56, 56, 56);
+    border: 1px solid grey;
+    font-size: 1rem;
+   
+    transition: width .1s ease-in;
+    cursor: pointer;
+   border-radius: 5px;
+    &:hover{
+        color: rgb(48, 48, 48);
+        border: 1.7px solid rgb(100, 100, 100);
+        width: 160px;
+    }
+
+  
+   
+}
+.share-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.context2 .share-btn .share{ 
+   letter-spacing: 3px;
+   font-family: 'roboto';
+   text-align: center;
+   width: 130px;
+   height: 40px;
+   margin: 1rem;
+   background: transparent;
+   color: rgb(56, 56, 56);
+   border: 1px solid grey;
+   font-size: 1rem;
+   outline: none;
+  
+   transition: width .1s ease-in;
+   cursor: pointer;
+  border-radius: 5px;
+   &:hover{
+       color: rgb(48, 48, 48);
+       border: 1.7px solid rgb(100, 100, 100);
+       width: 160px;
+   }
+
+ 
+  
+}
+
+.inactive{
+    border-bottom: 1px solid #fff;
+    transition: border .5s ease-in;
+
+    &:hover{
+        border-bottom: 1px solid #fff;
+    }
+}
+
+
+.cover-2{
+    background: linear-gradient(rgba(0,0,0,0.5) , rgba(58, 58, 58, 0.4)) , url(/img/pexels-andrea-piacquadio-3807763.jpg) ; 
+    height: 70vh;
+    width: 100%;
+    max-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+.content-2 {
+  display: flex;
+  height: 40%;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  margin: 2rem 4rem;
+  max-width: 100%;
+  
+  .content-text-2{
+      text-transform: uppercase;
+      letter-spacing: 12px;
+      color: #fff;
+      font-size: 1.4rem;
+      border-left: 3px solid #fff;
+      padding: 0rem 1rem;
+      animation: navs 2s ease-in-out; 
+  }
+  span{
+      font-size: 2.5rem;
+      text-decoration: none;
+      font-weight: 700;
+      color:#a1c0aa;
+    
+  }
+}
+ .cover-2 .content-2{
+    font-size: 1rem;
+ }
+ @media screen and (max-width: 460px){
+   #content{
+        justify-content: center;
+        align-items: flex-end;
+        text-align: center;
+
+    }
+    .content-2 .content-text-2{
+        text-align: center;
+    }
+    
+ }
+
+ .article{
+     display: flex;
+     padding: 1rem;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     font-family: 'poppins';
+     flex-wrap: wrap;
+ }
+
+ .contents-3{
+     flex: 1;
+     text-align: left;
+     flex-basis: 500px;
+ }
+ .content-4{
+    flex: 1;
+    text-align: left;
+   margin: 1rem;
+    ul{
+        list-style: none;
+    }
+ }
+ .articles{
+     margin: 1rem;
+    
+     h4{
+         font-size:2rem;
+         color: #3d3d3d;
+     }
+     p{
+         font-size: 1.3rem;
+     }
+ }
+
+ #table{
+     display: table;
+ }
+
+ section{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     background-color: black;
+     font-size: 2rem;
+     color: #fff;
+     font-family: 'poppins';
+     flex-wrap: wrap;
+     font-weight: 400;
+
+     h4{
+         text-transform: uppercase;
+     }
+
+     .img-section{
+         object-fit: cover;
+         flex: 1;
+ }
+ .section-content{
+     flex: 2;
+     padding: 2rem;
+     color: #afafaf;
+     span{
+         font-size: 2.5rem;
+         margin: 7px;
+         color: #fff;
+     }
+ }
+}
+.section-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+.sec-2-content{
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    color: #303030;
+    font-family: 'poppins';
+
+ h4{
+     letter-spacing: 10px;
+     text-transform: uppercase;
+     color:#000;
+     margin: 1rem;
+ }
+ p{
+     text-align: left;
+ }
+span{
+    text-decoration: underline;
+    cursor: pointer;
+}
+    
+}
+
+.cover-button{
+
+    button{
+        width: 150px;
+        height: 40px;
+        margin: 1rem;
+        background: transparent;
+        border: 1px solid #fafafa;
+        color: rgb(248, 248, 248);
+        font-size: 1rem;
+        transition: width .4s;
+        cursor: pointer;
+       border-radius: 5px;
+       outline: none;
+        &:hover{
+         width: 180px;
+        }
+    }
+}
+
+.cover-2{
+    background: linear-gradient(rgba(0,0,0,0.5) , rgba(58, 58, 58, 0.4)) , url(/img/pexels-andrea-piacquadio-3807763.jpg) ; 
+    height: 70vh;
+    width: 100%;
+    max-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.cover-3{
+    background: linear-gradient(rgba(0,0,0,0.6) , rgba(58, 58, 58, 0.4)) , url(/img/pexels-juan-pablo-serrano-arenas-904276.jpg) ; 
+    height: 60vh;
+    width: 100%;
+    max-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.content-3 {
+    display: flex;
+    height: 40%;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    margin: 2rem 4rem;
+    
+    .content-text-3{
+        text-transform: uppercase;
+        animation: navs 2s ease-in-out;
+        letter-spacing: 12px;
+        color: #fff;
+        font-size: 1.6rem;
+        border-left: 3px solid #fff;
+        padding: 0rem 1rem; 
+    }
+    span{
+        font-size: 2.3rem;
+        text-decoration: none;
+        font-weight: 700;
+        color:#f764ef;
+      
+    }
+  }
+
+.wrapper{
+    max-width:100%;
+    margin: auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.wrapper .box i.quote{
+
+    font-size: 20px;
+    color: #0f7fff;
+}
+.wrapper .box{
+    font-family: 'roboto';
+    flex-basis: 300px;
+    max-width: 100%;
+   margin: 1rem;
+    font-size: 20px;
+    background: #fff;
+    width: calc(33% - 10px);
+    padding: 25px;
+    border-radius: 3px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+
+    h3{
+        margin: 1rem;
+        text-align: center;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+}
+.wrapper .box .contentt{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+.box .info .profession{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #0f7fff;
+
+}
+.box .contentt .image{
+    height: 50px;
+    width: 50px;
+    padding: 3px;
+    background: #0f7fff;
+    border-radius: 50%;
+   
+}
+
+
+.contentt .image img{
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+.box:hover .contentt .image img{
+    border-color: #fff;
+}
+
+.box-1{
+    flex: 1;
+}
+.box-2{
+    flex: 1;
+}
+.box-3{
+    flex: 1;
+}
+.stars{
+    color: #0f7fff;
+    margin: 1rem;
+
+  
+}
+ .stars i .like{
+   margin-left: 10px;
+}
+
+.posting{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-top: 2rem;
+    font-size: 1rem;
+    font-family: 'roboto';
+    color: #3d3d3d;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 1rem;
+
+    .post-btn button{
+        color: #fff;
+        background: #0f7fff;
+        border: none;
+        width: 180px;
+        font-size: 1rem;
+        outline: none;
+      &:hover{
+          background: #0c66ce;
+      }
+    }
+}
+
+.posting-bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+   width: 100%;
+   height: 100vh;
+   background: rgba(0, 0, 0 ,0.5);
+   z-index: 9999;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   visibility: hidden;
+   opacity: 0;
+   transition: visibility 0s opacity 1s;
+   
+
+
+
+}
+.posting-box{
+    height: 300px;
+    width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    .header{
+        display: flex;
+        justify-content: center;
+       text-align: center;
+        padding: 1rem;
+        font-size: 1rem;
+        font-family: 'poppins';
+
+    }
+    .input{
+        padding: 1rem;
+    }
+    .input input{
+        width: 370px;
+        outline: none;
+        border:none;
+        background: #e9e9e9;
+        height:30px;
+        border-radius: 5px;
+
+    }
+    textarea{
+        background: #e9e9e9;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+    }
+}
+.active-bg{
+    visibility: visible;
+    opacity: 1;
+    transition: transform 300ms ease-in-out , opacity 300ms ease-in-out;
+}
+
+
+.cover-4{
+    background: linear-gradient(rgba(0,0,0,0.6) , rgba(58, 58, 58, 0.4)) , url(/img/pexels-rodnae-productions-6257543.jpg) ; 
+    height: 80vh;
+    width: 100%;
+    max-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+#video{
+    width: 500px;
+    border-radius: 10px;
+    flex: 1;
+    object-fit: cover;
+   max-width: auto;
+}
+
+.inner{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+text-align: center;
+
+
+
+}
+.video-container{
+    flex: 1;
+    order: 1;
+    width: 500px;
+   
+}
+.video-content{
+  width: 600px;
+    flex:1;
+    font-size:2rem;
+    font-family: 'poppins';
+    text-align: center;
+    color: #303030;
+    padding: .8rem;
+    order: 0;
+    margin: auto;
+}
+
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   margin: 2rem 1rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-family:sans-serif;
+    letter-spacing: 12px;
+    margin: auto;
+    span{
+        font-size: 2rem;
+        color: #990d0d;
+        font-weight: 800;
+    }
+}
+
+@media screen and (max-width:540px){
+    .video-content{
+        font-size: 1.3rem;
+    }
+}
+.article-law{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    margin: auto;
+    color: #272727;
+    h3{
+        padding: 1rem;
+        font-family: sans-serif;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: #071e3d;
+    }
+    p{
+        font-size: 1.1rem;
+        font-family: 'poppins';
+        padding: 2rem;
+    }
+
+    a{
+        color: #000;
+    }
+}
+
+.card-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   flex-wrap: wrap;
+    padding-top: 2rem;
+    color: rgb(51, 51, 51);
+    font-family: 'poppins';
+    font-size: 1rem;
+}
+.card-1{
+    height: 500px;
+    width: 340px;
+    box-shadow: 3px 3px 10px rgba(58, 58, 58, 0.4);
+    margin: 1rem;
+    border-radius: 15px;
+   
+    .title{
+        border-radius: 13px 13px 0px  0px;
+        padding: 1rem;
+        background: #ffffff;
+        color: rgb(46, 46, 46);
+        font-size: 1.3rem;
+    }
+    .img-card img{
+        object-fit: cover;
+        height: 200px;
+        width: 340px;
+    }
+    .content-card{
+        margin: 4px;
+    }
+   
+
+}
+
+.cover-5{
+    background:radial-gradient(circle, rgba(2,0,36,.4) 0%, rgba(80,103,250,.3) 0%, rgba(15,14,107,.3) 100%, rgba(255,255,255,.4) 100%), url(/img/ralph.png) ; 
+    height: 80vh;
+    width: 100%;
+    max-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+}
+
+.contents-4 {
+    display: flex;
+    height: 40%;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: right;
+    margin: 2rem 4rem;
+    
+   
+    
+    .content-text-4{
+        text-transform: uppercase;
+         font-family: 'poppins';
+        letter-spacing: 12px;
+        color: #fff;
+        font-size: 1.8rem;
+        border-right: 2px solid #fff;
+        padding: 0rem 1rem; 
+        animation: navs 2s ease-in-out;
+    }
+    span{
+        font-size: 2em;
+        text-decoration: none;
+        font-weight: 700;
+        color:#ffce74;
+        font-family: 'Montserrat';
+       
+      
+    }
+    input{
+        width: 350px;
+        height: 40px;
+        border-radius: 15px;
+        border: none;
+        outline: none;background: #ebebeb;
+       
+    }
+  }
+
+  @media screen and (max-width:540px){
+    .content-text-4{
+        font-size: 1rem;
+        span{
+            font-size: 2rem;
+        }
+    }
+    
+
+  }
+
+  .gallery{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap-reverse;
+      text-align: center;
+      font-family: 'Montserrat';
+      font-size: 1rem;
+      font-weight: 600;
+      color: #303030;
+     
+
+      .gellery-1{
+          height: 200px;
+          width: 200px;
+          margin: 12px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0 ,0.2);
+          border-radius: 20px;
+          &:hover{
+              transform: scale(1.1);
+          }
+      }
+
+      .gallery-content i{
+            font-size: 5rem;
+            color: rgb(0, 65, 206);
+           
+      }
+      .gallery-content{
+          padding: 1rem;
+         
+      }
+     
+  }
+
+  
+
+  @keyframes navs{
+
+    0% {
+        margin-bottom: -100px;
+        opacity: 0;
+    }
+    50%{
+        margin-bottom: -50px;
+        opacity: .5;
+    }
+    100% {
+        margin-bottom: 0px;
+        opacity: 1;
+    }
+  }
